@@ -6,7 +6,7 @@ app.use(express.json());
 
 app.post("/test", (req, res) => {
   const name = req.body;
-  console.log("name =====", JSON.stringify(req));
+  console.log("name =====", JSON.stringify(JSON.parse(JSON.stringify(req))));
   res.send(name);
 });
 
